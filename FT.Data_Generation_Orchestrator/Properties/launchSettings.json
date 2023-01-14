@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "FT.Data_Generation_Orchestrator": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1704.2
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FT.Data_Generation_Orchestrator", "FT.Data_Generation_Orchestrator.csproj", "{D3D1B968-D9D4-43DB-961E-95CB2F885584}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D3D1B968-D9D4-43DB-961E-95CB2F885584}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3D1B968-D9D4-43DB-961E-95CB2F885584}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3D1B968-D9D4-43DB-961E-95CB2F885584}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3D1B968-D9D4-43DB-961E-95CB2F885584}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {89766433-776B-4EE1-B3CD-6E1FB28B0CB3}
+	EndGlobalSection
+EndGlobal
