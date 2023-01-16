@@ -7,7 +7,7 @@
     <UserSecretsId>32d33499-a04b-4d85-a7bf-506588b97f85</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerfileContext>.</DockerfileContext>
-    <DockerComposeProjectPath>docker-compose.dcproj</DockerComposeProjectPath>
+    <DockerComposeProjectPath>FT.Container.dcproj</DockerComposeProjectPath>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'https' " />
@@ -28,7 +28,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Services\" />
-    <Folder Include="Objects\" />
+    <ProjectReference Include="..\FT.DatabaseService\FT.DataWriter.csproj" />
+    <ProjectReference Include="..\FT.Objects\FT.Objects.csproj" />
   </ItemGroup>
 </Project>
