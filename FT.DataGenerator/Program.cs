@@ -12,7 +12,7 @@ builder.Services.AddSwaggerGen();
 // Use Serilog
 builder.Host.UseSerilog((hostContext, services, configuration) => {
     configuration
-        .WriteTo.File("serilog-file.log")
+        .WriteTo.File("DataGenerator.log")
         .WriteTo.Console();
 });
 
