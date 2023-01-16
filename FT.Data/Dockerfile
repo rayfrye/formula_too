@@ -10,16 +10,16 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
-COPY ["FT.DataGenerator.csproj", "."]
-RUN dotnet restore "./FT.DataGenerator.csproj"
+COPY ["FT.Data.csproj", "."]
+RUN dotnet restore "./FT.Data.csproj"
 COPY . .
 WORKDIR "/src/."
-RUN dotnet build "FT.DataGenerator.csproj" -c Release -o /app/build
+RUN dotnet build "FT.Data.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "FT.DataGenerator.csproj" -c Release -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "FT.Data.csproj" -c Release -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "FT.DataGenerator.dll"]
+ENTRYPOINT ["dotnet", "FT.Data.dll"]

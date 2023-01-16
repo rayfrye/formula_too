@@ -1,21 +1,50 @@
 version: '3.4'
 
 services:
-  ft.datagenerator:
-    image: ${DOCKER_REGISTRY-}ftdatagenerator
-    build:
-      context: .
-      dockerfile: Dockerfile
-    depends_on: [
-        mongodb_container
-    ]
+    mongodb:
+        container_name: ${MONGO_CONTAINER_NAME}
+        image: mongo:4.2
+        environment:
+            - MONGO_INITDB_ROOT_USERNAME=${MONGO_INITDB_ROOT_USERNAME}
+            - MONGO_INITDB_DATABASE=auth
+            - MONGO_INITDB_ROOT_PASSWORD=${MONGO_INITDB_ROOT_PASSWORD}
+        networks: 
+            - ft-network
+        ports:
+            - '${MONGO_PORT}:${MONGO_PORT}'
+        volumes:
+            - ${MONGO_VOLUME}:/data/db
+  
+    mongo-express:
+        container_name: mongo-express
+        restart: always
+        image: mongo-express
+        depends_on:
+            - mongodb
+        networks: 
+            - ft-network
+        environment:
+            - ME_CONFIG_MONGODB_SERVER=${MONGO_CONTAINER_NAME}
+            - ME_CONFIG_MONGODB_ADMINUSERNAME=${MONGO_INITDB_ROOT_USERNAME}
+            - ME_CONFIG_MONGODB_ADMINPASSWORD=${MONGO_INITDB_ROOT_PASSWORD}
+            - ME_CONFIG_BASICAUTH_USERNAME=${MONGO_EXPRESS_USER}
+            - ME_CONFIG_BASICAUTH_PASSWORD=${MONGO_EXPRESS_PW}
+        ports:
+            - '${MONGO_EXPRESS_PORT}:${MONGO_EXPRESS_PORT}'
 
-  mongodb_container:
-    image: mongo:latest
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: ${MongoDBUsername}
-      MONGO_INITDB_ROOT_PASSWORD: ${MongoDBPW}
-    ports:
-      - 27017:27017
-    volumes:
-      - ${LocalMongoVolume}:/data/db
+    ft.data:
+        container_name: data
+        image: ${DOCKER_REGISTRY-}ftdata
+        build:
+            context: .
+            dockerfile: Dockerfile
+        depends_on:
+            - mongodb
+        env_file:
+            - .env
+        networks: 
+            - ft-network
+
+networks:
+    ft-network:
+        driver: bridge
