@@ -1,0 +1,31 @@
+2023-01-15 21:58:17.093 -05:00 [INF] Now listening on: https://localhost:7259
+2023-01-15 21:58:17.142 -05:00 [INF] Now listening on: http://localhost:5202
+2023-01-15 21:58:17.144 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-15 21:58:17.145 -05:00 [INF] Hosting environment: Development
+2023-01-15 21:58:17.145 -05:00 [INF] Content root path: /Users/rfrye/Projects/formula_too/FT.DataGenerator
+2023-01-15 21:58:18.353 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7259/swagger - -
+2023-01-15 21:58:18.499 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7259/swagger - - - 301 0 - 147.8773ms
+2023-01-15 21:58:18.513 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7259/swagger/index.html - -
+2023-01-15 21:58:18.630 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7259/swagger/index.html - - - 200 - text/html;charset=utf-8 116.9415ms
+2023-01-15 21:58:18.656 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7259/swagger/swagger-ui.css - -
+2023-01-15 21:58:18.692 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7259/swagger/swagger-ui-standalone-preset.js - -
+2023-01-15 21:58:18.694 -05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-01-15 21:58:18.694 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7259/swagger/swagger-ui.css - - - 200 143943 text/css 38.2597ms
+2023-01-15 21:58:18.695 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7259/swagger/swagger-ui-bundle.js - -
+2023-01-15 21:58:18.819 -05:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-01-15 21:58:18.827 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7259/swagger/swagger-ui-standalone-preset.js - - - 200 339486 text/javascript 135.7984ms
+2023-01-15 21:58:18.835 -05:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-01-15 21:58:18.835 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7259/swagger/swagger-ui-bundle.js - - - 200 1096145 text/javascript 140.5495ms
+2023-01-15 21:58:19.250 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7259/swagger/v1/swagger.json - -
+2023-01-15 21:58:19.287 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7259/swagger/favicon-32x32.png - -
+2023-01-15 21:58:19.288 -05:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2023-01-15 21:58:19.290 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7259/swagger/favicon-32x32.png - - - 200 628 image/png 1.9812ms
+2023-01-15 21:58:19.414 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7259/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 163.3600ms
+2023-01-15 21:58:23.058 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7259/WeatherForecast - -
+2023-01-15 21:58:23.064 -05:00 [INF] Executing endpoint 'FT.DataGenerator.Controllers.WeatherForecastController.Get (FT.DataGenerator)'
+2023-01-15 21:58:23.077 -05:00 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[FT.DataGenerator.WeatherForecast] Get() on controller FT.DataGenerator.Controllers.WeatherForecastController (FT.DataGenerator).
+2023-01-15 21:58:23.081 -05:00 [INF] Test
+2023-01-15 21:58:23.086 -05:00 [INF] Executing ObjectResult, writing value of type 'FT.DataGenerator.WeatherForecast[]'.
+2023-01-15 21:58:23.104 -05:00 [INF] Executed action FT.DataGenerator.Controllers.WeatherForecastController.Get (FT.DataGenerator) in 22.1501ms
+2023-01-15 21:58:23.107 -05:00 [INF] Executed endpoint 'FT.DataGenerator.Controllers.WeatherForecastController.Get (FT.DataGenerator)'
+2023-01-15 21:58:23.109 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7259/WeatherForecast - - - 200 - application/json;+charset=utf-8 49.7261ms
