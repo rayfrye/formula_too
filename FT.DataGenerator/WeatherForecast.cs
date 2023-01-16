@@ -1,4 +1,4 @@
-﻿namespace FT.DataGenerator;
+﻿namespace FT.Data;
 
 public class WeatherForecast
 {
