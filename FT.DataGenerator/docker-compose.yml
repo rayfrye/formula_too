@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  ft.datagenerator:
+    image: ${DOCKER_REGISTRY-}ftdatagenerator
+    build:
+      context: .
+      dockerfile: Dockerfile
