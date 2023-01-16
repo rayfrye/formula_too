@@ -22,6 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove=".env" />
     <None Remove="Serilog" />
     <None Remove="Serilog.AspNetCore" />
     <None Remove="Serilog.Sinks.File" />

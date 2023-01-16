@@ -351,3 +351,9 @@ MigrationBackup/
 
 # Ignore environmental app settings
 appsettings.*.json
+
+# Ignore .env file for docker
+.env
+
+# Ignore data stored in local volume
+Volumes/*

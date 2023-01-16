@@ -6,3 +6,16 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    depends_on: [
+        mongodb_container
+    ]
+
+  mongodb_container:
+    image: mongo:latest
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MongoDBUsername}
+      MONGO_INITDB_ROOT_PASSWORD: ${MongoDBPW}
+    ports:
+      - 27017:27017
+    volumes:
+      - ${LocalMongoVolume}:/data/db
