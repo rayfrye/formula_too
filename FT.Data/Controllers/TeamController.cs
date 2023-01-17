@@ -29,6 +29,8 @@ namespace FT.Data.Controllers
         {
             log.LogInformation("New Team Request Received");
 
+            var newTeam = await teamData.CreateNewTeam();
+
             return Ok(newTeam.Team.Name);
         }
     }
