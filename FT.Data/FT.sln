@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FT.Data.Writer", "..\FT.Dat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FT.Data.Team", "..\FT.Data.Team\FT.Data.Team.csproj", "{88439DFD-140E-4CF0-B062-03A79D8CED5E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FT.ServiceCollectionExtensions", "..\FT.ServiceCollectionExtensions\FT.ServiceCollectionExtensions.csproj", "{DB05A85A-1990-477A-A67B-AEC9F763DC6A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{88439DFD-140E-4CF0-B062-03A79D8CED5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88439DFD-140E-4CF0-B062-03A79D8CED5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{88439DFD-140E-4CF0-B062-03A79D8CED5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB05A85A-1990-477A-A67B-AEC9F763DC6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB05A85A-1990-477A-A67B-AEC9F763DC6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB05A85A-1990-477A-A67B-AEC9F763DC6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB05A85A-1990-477A-A67B-AEC9F763DC6A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

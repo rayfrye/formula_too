@@ -1,4 +1,5 @@
 ﻿using FT.Data.Team;
+using FT.Objects;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,11 +11,13 @@ namespace FT.Data.Controllers
     {
         private readonly ILogger<TeamController> log;
         private readonly ITeamData teamData;
+        private readonly AppSettings appSettings;
 
-        public TeamController(ILogger<TeamController> _log, ITeamData _teamData)
+        public TeamController(ILogger<TeamController> _log, ITeamData _teamData, AppSettings _appSettings)
         {
             log = _log;
             teamData = _teamData;
+            appSettings = _appSettings;
         }
 
         /// <summary>
@@ -25,8 +28,6 @@ namespace FT.Data.Controllers
         public async Task<IActionResult> Post()
         {
             log.LogInformation("New Team Request Received");
-
-            var newTeam = await teamData.CreateNewTeam();
 
             return Ok(newTeam.Team.Name);
         }
