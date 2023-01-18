@@ -10,6 +10,7 @@
     <ProjectReference Include="..\FT.Data.Team\FT.Data.Team.csproj" />
     <ProjectReference Include="..\FT.Objects\FT.Objects.csproj" />
     <ProjectReference Include="..\FT.Data.Writer\FT.Data.Writer.csproj" />
+    <ProjectReference Include="..\FT.Data\FT.Data.csproj" />
   </ItemGroup>
 
   <ItemGroup>

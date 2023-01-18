@@ -1,5 +1,5 @@
 ﻿using FT.Data.Team;
-using FT.Data.Writer;
+using FT.Data;
 using FT.Objects;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -52,14 +52,14 @@ namespace FT.ServiceCollectionExtensions
         {
             switch (config.ServiceProviders.DataTeam)
             {
-                case ("FileWriter"):
+                case ("File"):
                     {
-                        return services.AddSingleton<IDataWriter, FileWriter>();
+                        return services.AddSingleton<IData, TestData>();
                         break;
                     }
                 default:
                     {
-                        return services.AddSingleton<IDataWriter, FileWriter>();
+                        return services.AddSingleton<IData, TestData>();
                         break;
                     }
             }

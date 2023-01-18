@@ -1,4 +1,4 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
@@ -9,11 +9,11 @@ Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "FT.Container", "FT.Containe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FT.Objects", "..\FT.Objects\FT.Objects.csproj", "{F4886A99-0C7B-47BD-9032-B8379E7B6E39}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FT.Data.Writer", "..\FT.Data.Writer\FT.Data.Writer.csproj", "{5EBBA579-89CE-431A-B723-8BFDB4B46FA0}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FT.Data.Team", "..\FT.Data.Team\FT.Data.Team.csproj", "{88439DFD-140E-4CF0-B062-03A79D8CED5E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FT.ServiceCollectionExtensions", "..\FT.ServiceCollectionExtensions\FT.ServiceCollectionExtensions.csproj", "{DB05A85A-1990-477A-A67B-AEC9F763DC6A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FT.Data", "..\FT.Data\FT.Data.csproj", "{B1561FF4-7D4C-4E05-9ED8-BFA473100F02}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +45,10 @@ Global
 		{DB05A85A-1990-477A-A67B-AEC9F763DC6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB05A85A-1990-477A-A67B-AEC9F763DC6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB05A85A-1990-477A-A67B-AEC9F763DC6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1561FF4-7D4C-4E05-9ED8-BFA473100F02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1561FF4-7D4C-4E05-9ED8-BFA473100F02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1561FF4-7D4C-4E05-9ED8-BFA473100F02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1561FF4-7D4C-4E05-9ED8-BFA473100F02}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
