@@ -1,5 +1,5 @@
 ﻿using FT.Data.Team;
-using FT.Data;
+using FT.DataOps;
 using FT.Objects;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -11,7 +11,8 @@ namespace FT.ServiceCollectionExtensions
         {
             services
                 .AddITeamData(config)
-                .AddIDataWriter(config);
+                .AddIDataOps(config)
+            ;
 
             return services;
         }
@@ -25,7 +26,7 @@ namespace FT.ServiceCollectionExtensions
         {
             switch (config.ServiceProviders.DataTeam)
             {
-                case ("TestTeamData"):
+                case ("Test"):
                     {
                         return services.AddSingleton<ITeamData, TestTeamData>();
                         break;
@@ -42,24 +43,24 @@ namespace FT.ServiceCollectionExtensions
                     }
             }
         }
-
+        
         /// <summary>
         /// 
         /// </summary>
         /// <param name="services">The <see cref="IServiceCollection"/>.</param>
         /// <param name="config">The <see cref="IConfiguration"/>.</param>
-        static IServiceCollection AddIDataWriter(this IServiceCollection services, AppSettings config)
+        static IServiceCollection AddIDataOps(this IServiceCollection services, AppSettings config)
         {
             switch (config.ServiceProviders.DataTeam)
             {
-                case ("File"):
+                case ("Test"):
                     {
-                        return services.AddSingleton<IData, TestData>();
+                        return services.AddSingleton<IDataOps, TestDataOps>();
                         break;
                     }
                 default:
                     {
-                        return services.AddSingleton<IData, TestData>();
+                        return services.AddSingleton<IDataOps, TestDataOps>();
                         break;
                     }
             }
