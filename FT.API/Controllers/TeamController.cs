@@ -21,13 +21,19 @@ namespace FT.Data.Controllers
         }
 
         /// <summary>
-        /// 
+        /// Creates a new Formula Too team
         /// </summary>
         /// <returns></returns>
+        /// <param name="teamName"></param>
+        /// <param name="description"></param>
+        /// <param name="isManufacturer"></param>
+        [ProducesResponseType(typeof(ITeamData), 200)]
+        [ProducesResponseType(typeof(IActionResult), 400)]
+        [ProducesResponseType(typeof(IActionResult), 404)]
         [HttpPost(Name = "PostNewTeam")]
-        public async Task<IActionResult> Post()
+        public async Task<IActionResult> Post(string teamName, string description, bool isManufacturer)
         {
-            log.LogInformation("New Team Request Received");
+            log.LogInformation($"New team request received, {teamName}");
 
             var newTeam = await teamData.CreateNewTeam();
 

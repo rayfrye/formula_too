@@ -1,4 +1,4 @@
-﻿namespace FT.DataWriter
+﻿namespace FT.Data.Writer
 {
     public interface IDataWriter
     {

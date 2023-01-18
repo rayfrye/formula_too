@@ -8,23 +8,23 @@ using System.Threading.Tasks;
 
 namespace FT.Data.Team
 {
-    public  class RealTeamData : ITeamData
+    public  class TestTeamData : ITeamData
     {
         private readonly ILogger log;
-        public RealTeamData(ILogger<TestTeamData> _log)
+        public TestTeamData(ILogger<TestTeamData> _log)
         {
             log = _log;
         }
 
         public async Task<TeamResponse> CreateNewTeam()
         {
-            log.LogInformation("REAL TEAM - Received new team creation request");
+            log.LogInformation("Received new team creation request");
 
             TeamResponse response = new TeamResponse()
             {
                 @Team = new Objects.Team()
                 {
-                    Name = "Definitely not ferrari"
+                    Name = "H2WOAH WHAT A GOOD TEAM"
                 }
                 , Response = new HttpResponseMessage()
                 {
